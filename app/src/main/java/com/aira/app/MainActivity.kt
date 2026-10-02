@@ -9,10 +9,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val textView = TextView(this)
-        textView.text = "Aira"
-        textView.textSize = 28f
+        val text = TextView(this)
+        text.text = "Aira APK Working"
+        text.textSize = 24f
 
-        setContentView(textView)
+        setContentView(text)
     }
 }
