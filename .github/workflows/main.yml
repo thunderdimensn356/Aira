@@ -1,25 +1,23 @@
-name: Build APK
+name: Test Workflow
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: 17
+      - name: Show Repo
+        run: |
+          echo "Repository Found"
+          pwd
+          ls -R
 
-      - name: Show Files
-        run: ls -R
-
-      - name: Done
-        run: echo "Workflow Working"
+      - name: Success
+        run: echo "Workflow Working ✅"
         
